@@ -1,0 +1,30 @@
+body {
+    padding: 25px;
+    background-color: green;
+}
+
+.tab-pane {
+    padding: 10px;
+}
+
+#make {
+    background-color: red;
+    font-weight: bold;
+}
+
+#info {
+    background-color: red;
+    font-weight: bold;
+}
+
+#confirmation {
+    background-color: red;
+    font-weight: bold;
+}
+
+#pizzahero {
+    height: 500px;
+    background-image: url(pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

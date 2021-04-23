@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mario's Pizza</title>
+    <!-- Bootstrap styles first -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Our styles -->
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body id="page">
+
+<h1>Mario's Pizza</h1>
+
+<div class="container">
+    <nav>
+        <ul id="tabs" class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#make">Make Pizza</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#info">Delivery Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#confirmation">Confirmation</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tab-content">
+        <div id="make" class="tab-pane active">
+
+            <h2>Make Your Pizza</h2><br>
+
+            <h3>Size</h3>
+            <input type="radio" name="size" id="small" data-price="7" data-size="Small" checked>
+            <label for="small">Small $7</label>
+            <br>
+            <input type="radio" name="size" id="medium" data-price="9" data-size="Medium">
+            <label for="medium">Medium $9</label>
+            <br>
+            <input type="radio" name="size" id="large" data-price="12" data-size="Large">
+            <label for="large">Large $12</label>
+
+            <h3>Crust</h3>
+            <input type="radio" name="crust" id="thin" data-crust="Thin" checked>
+            <label for="thin">Thin</label>
+            <br>
+            <input type="radio" name="crust" id="pan" data-crust="Pan">
+            <label for="pan">Pan</label>
+            <br>
+            <input type="radio" name="crust" id="gluten-free" data-crust="Gluten Free">
+            <label for="gluten-free">Gluten Free</label>
+
+            <h3>Meats ($1.50 each)</h3>
+            <input type="checkbox" name="meat" id="pepperoni" data-meat="Pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <br>
+            <input type="checkbox" name="meat" id="sausage" data-meat="Sausage">
+            <label for="sausage">Sausage</label>
+            <br>
+            <input type="checkbox" name="meat" id="bacon" data-meat="Bacon">
+            <label for="bacon">Bacon</label>
+
+            <h3>Veggies ($1.00 each)</h3>
+            <input type="checkbox" name="veggie" id="spinach" data-veggie="Spinach">
+            <label for="spinach">Spinach</label>
+            <br>
+            <input type="checkbox" name="veggie" id="onions" data-veggie="Onions">
+            <label for="onions">Onions</label>
+            <br>
+            <input type="checkbox" name="veggie" id="peppers" data-veggie="Peppers">
+            <label for="peppers">Peppers</label>
+
+            <p>When you are done filling out this form, please go to the "Delivery Info" tab
+                to continue ordering you pizza.</p>
+
+
+        </div>
+
+        <div id="info" class="tab-pane">
+            <h2>Enter Your Delivery Info</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required="required">
+            <br>
+            <br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required="required">
+            <br>
+            <br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" required="required">
+
+            <p>When you are done filling out this form, please go to the "Confirmation" tab
+                to finish ordering you pizza.</p>
+
+        </div>
+
+        <div id="confirmation" class="tab-pane">
+            <h2>Order Confirmation</h2>
+            <h3>Pizza</h3>
+            <p id="size-output"></p>
+            <p id="crust-output"></p>
+            <p id="meat-output"></p>
+            <p id="veggie-output"></p>
+            <p id="subtotal"></p>
+            <p id="tax"></p>
+            Delivery Fee: $2
+            <br>
+            <br>
+            <h2><p id="total"></p></h2>
+            <br>
+            <h3>Delivery Info</h3>
+            <p id="name-output"></p>
+            <p id="address-output"></p>
+            <p id="phone-output"></p>
+            <br>
+            <br>
+            If this info is okay click "Order" to order your pizza
+            <br>
+            <button onclick="window.location.href='thanks.html'">Order</button>
+
+        </div>
+
+        <div id="pizzahero"></div>
+
+    </div>
+</div>
+
+<!-- jQuery first -- BEWARE OF THE SLIM VERSION FROM BOOTSTRAP -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<!-- Popper and Bootstrap second -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Our code last -->
+<script src="tabs.js"></script>
+
+</body>
+
+</html>
